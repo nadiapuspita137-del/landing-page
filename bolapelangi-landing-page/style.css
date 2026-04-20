@@ -1,0 +1,258 @@
+/* ========================================
+   BOLAPELANGI - CUSTOM SPORTY CSS
+   Efek neon, glow, hover, animasi sporty
+   ======================================== */
+
+/* Reset & Font Base */
+* {
+  font-family: 'Poppins', system-ui, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ========== NEON GLOW EFFECTS ========== */
+.neon-glow {
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5), 0 0 15px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s ease;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Border neon */
+.neon-border {
+  border-bottom: 2px solid #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* ========== CARD GLOW EFFECT ========== */
+.card-glow {
+  transition: all 0.25s ease;
+}
+
+.card-glow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -12px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* ========== NAVBAR LINK NEON UNDERLINE ========== */
+.nav-link-neon {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-link-neon:hover {
+  color: #60a5fa;
+  text-shadow: 0 0 4px #3b82f6;
+}
+
+/* ========== NEON UNDERLINE UNTUK JUDUL LIST ========== */
+.neon-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.neon-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  border-radius: 4px;
+  box-shadow: 0 0 8px #3b82f6;
+  transition: width 0.3s;
+}
+
+.objective-item:hover .neon-underline::after {
+  width: 100%;
+}
+
+/* ========== HERO GRADIENT DENGAN EFEK BOLA ========== */
+.hero-gradient {
+  background: radial-gradient(circle at 20% 30%, #0c1445, #020617);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient::before {
+  content: "⚽";
+  font-size: 300px;
+  position: absolute;
+  bottom: -80px;
+  right: -60px;
+  opacity: 0.05;
+  pointer-events: none;
+  transform: rotate(-15deg);
+}
+
+.hero-gradient::after {
+  content: "🏆";
+  font-size: 220px;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* ========== NUMBER BADGE SPORTY ========== */
+.number-badge-sport {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 1px solid #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+  color: #3b82f6;
+  font-weight: 800;
+}
+
+/* ========== FLOATING SOCIAL ICONS (WA & TELEGRAM) ========== */
+.whatsapp-float,
+.telegram-float {
+  position: relative;
+  animation: float 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* Animasi mengambang berbeda untuk masing-masing */
+.whatsapp-float {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+.telegram-float {
+  animation: floatSlow 2.5s ease-in-out infinite;
+}
+
+/* Animasi bounce lambat untuk WhatsApp */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Animasi float untuk Telegram */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Efek ripple saat hover */
+.whatsapp-float::before,
+.telegram-float::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease-out;
+}
+
+.whatsapp-float:hover::before,
+.telegram-float:hover::before {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+}
+
+/* Tooltip dengan efek slide */
+.whatsapp-float span,
+.telegram-float span {
+  transition: all 0.3s ease;
+  transform: translateX(10px);
+}
+
+.whatsapp-float:hover span,
+.telegram-float:hover span {
+  transform: translateX(0);
+}
+
+/* ========== SMOOTH SCROLL ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== RESPONSIVE TWEAKS ========== */
+@media (max-width: 768px) {
+  .hero-gradient::before {
+    font-size: 180px;
+    bottom: -40px;
+    right: -30px;
+  }
+  .hero-gradient::after {
+    font-size: 140px;
+    top: -20px;
+    left: -20px;
+  }
+  
+  .number-badge-sport {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+  
+  /* Animasi lebih halus di mobile */
+  .whatsapp-float,
+  .telegram-float {
+    animation-duration: 1.5s;
+  }
+}
+
+/* ========== UTILITY ========== */
+.mobile-menu-active {
+  backdrop-filter: blur(12px);
+}
+
+.objective-item {
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.objective-item:hover {
+  background-color: rgba(15, 23, 42, 0.8);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Animasi fade in untuk card */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-glow {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.card-glow:nth-child(1) { animation-delay: 0.1s; }
+.card-glow:nth-child(2) { animation-delay: 0.2s; }
+.card-glow:nth-child(3) { animation-delay: 0.3s; }
+.card-glow:nth-child(4) { animation-delay: 0.4s; }
+
+/* Efek pulse untuk badge notifikasi (opsional) */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
