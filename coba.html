@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bolapelangi | Sports Hub & Football Betting</title>
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+   <!-- favicontol -->
+  <link rel="icon" href="logo.png" type="image/png">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- External CSS terpisah -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white">
+
+  <!-- ========== STICKY NAVBAR ========== -->
+  <nav class="sticky top-0 z-50 bg-[#0a0f2a]/90 backdrop-blur-md border-b border-blue-500/30 shadow-lg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2 group cursor-pointer">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-md shadow-blue-500/30 overflow-hidden">
+          <img src="logo.png" alt="BolaPelangi" class="w-15 h-15 object-cover">
+        </div>
+        <span class="font-extrabold text-2xl tracking-tight text-white">
+          Bola<span class="text-white">Pelangi</span>
+        </span>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a href="https://shortq.org/bolapelangi" class="nav-link-neon text-gray-200 font-semibold text-sm lg:text-base transition">Home</a>
+        <a href="https://shortq.info/prediksibola" class="nav-link-neon text-gray-200 font-semibold text-sm lg:text-base transition">Jadwal</a>
+        <a href="https://shortq.info/prediksibola" class="nav-link-neon text-gray-200 font-semibold text-sm lg:text-base transition">Pasaran</a>
+        <a href="https://bopel.vip/wa" class="nav-link-neon text-gray-200 font-semibold text-sm lg:text-base transition">Contact</a>
+        <a href="https://bopel.link/5" class="ml-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 font-bold text-sm shadow-lg neon-glow transition-all">
+          <i class="fas fa-user-plus mr-1"></i> Daftar
+        </a>
+        <a href="https://bopel.link/5" class="px-5 py-2.5 rounded-full border border-blue-500 bg-transparent text-blue-400 font-semibold text-sm hover:bg-blue-500/10 transition-all">
+          <i class="fas fa-sign-in-alt mr-1"></i> Login
+        </a>
+      </div>
+      
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-blue-400 text-2xl focus:outline-none hover:text-blue-300 transition">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="md:hidden hidden bg-[#0a0f2a]/95 backdrop-blur-lg border-t border-blue-500/30">
+      <div class="flex flex-col px-6 py-5 space-y-5">
+        <a href="https://shortq.org/bolapelangi" class="text-gray-200 font-medium py-2 hover:text-blue-400 transition flex items-center gap-3"><i class="fas fa-home w-5 text-blue-400"></i> Home</a>
+        <a href="https://shortq.info/prediksibola" class="text-gray-200 font-medium py-2 hover:text-blue-400 transition flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-blue-400"></i> Jadwal</a>
+        <a href="https://shortq.info/prediksibola" class="text-gray-200 font-medium py-2 hover:text-blue-400 transition flex items-center gap-3"><i class="fas fa-chart-line w-5 text-blue-400"></i> Pasaran</a>
+        <a href="https://bopel.vip/wa" class="text-gray-200 font-medium py-2 hover:text-blue-400 transition flex items-center gap-3"><i class="fas fa-envelope w-5 text-blue-400"></i> Contact</a>
+        <div class="flex flex-col gap-3 pt-2">
+          <a href="https://bopel.link/5" class="text-center py-2.5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 font-bold shadow-md neon-glow">Daftar Sekarang</a>
+          <a href="https://mobile.mybopel1.net/" class="text-center py-2.5 rounded-xl border border-blue-500 text-blue-400 font-semibold">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-gradient py-20 md:py-28 px-6 text-center relative">
+      <div class="max-w-4xl mx-auto relative z-10">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 backdrop-blur-sm rounded-full px-4 py-1.5 border border-blue-400/40 mb-6">
+          <i class="fas fa-trophy text-blue-400 text-xs"></i>
+          <span class="text-blue-300 text-xs font-semibold tracking-wide">OFFICIAL SPORTS HUB BOLAPELANGI</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+          <span class="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">Pusat Informasi Bola</span><br>
+          <span class="text-blue-500 drop-shadow-[0_0_12px_rgba(59,130,246,0.7)]">& Pasaran Terpercaya</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl mt-6 max-w-2xl mx-auto">
+          Update skor langsung, prediksi akurat, dan pasaran bola dengan odds terbaik. Rasakan sensasi sportbook modern dalam genggaman.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5 mt-10">
+          <a href="https://shortq.info/prediksibola" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl font-bold text-lg shadow-xl neon-glow transition-all">
+            <i class="fas fa-futbol"></i> Lihat Jadwal
+          </a>
+          <a href="https://shortq.org/bolapelangi" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-500/50 rounded-xl font-bold text-lg hover:bg-blue-500/20 transition-all">
+            <i class="fas fa-chart-simple"></i> Main Sekarang
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-4 left-6 opacity-20 text-7xl rotate-12">⚽</div>
+      <div class="absolute top-20 right-10 opacity-10 text-8xl">🏅</div>
+    </section>
+
+    <!-- CONTENT SECTION: List bernomor -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold inline-block border-b-4 border-blue-500 pb-2 neon-border">Keunggulan Platform Bolapelangi</h2>
+        <p class="text-gray-300 mt-4 max-w-2xl mx-auto">Fitur unggulan untuk pengalaman taruhan bola terbaik</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Item 1 -->
+        <div class="objective-item bg-[#0f172a]/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 card-glow transition-all">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-xl number-badge-sport flex items-center justify-center text-2xl font-black shadow-md">1</div>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-400 neon-underline">Live Score Real-Time</h3>
+              <p class="text-gray-300 mt-3 leading-relaxed">Update skor langsung dari berbagai liga top Eropa & internasional. Disertai statistik dan notifikasi gol instan.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="objective-item bg-[#0f172a]/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 card-glow transition-all">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-xl number-badge-sport flex items-center justify-center text-2xl font-black shadow-md">2</div>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-400 neon-underline">Pasaran Lengkap & Odds Unggul</h3>
+              <p class="text-gray-300 mt-3 leading-relaxed">Handicap, over/under, 1x2, dan mix parlay dengan odds kompetitif. Analisis mendalam dari pakar.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="objective-item bg-[#0f172a]/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 card-glow transition-all">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-xl number-badge-sport flex items-center justify-center text-2xl font-black shadow-md">3</div>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-400 neon-underline">Prediksi Akurat & AI</h3>
+              <p class="text-gray-300 mt-3 leading-relaxed">Sistem prediksi berbasis AI dengan akurasi tinggi, mencakup head-to-head, formasi, dan performa terkini.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="objective-item bg-[#0f172a]/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 card-glow transition-all">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-xl number-badge-sport flex items-center justify-center text-2xl font-black shadow-md">4</div>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-400 neon-underline">Cashback & Bonus Mingguan</h3>
+              <p class="text-gray-300 mt-3 leading-relaxed">Program loyalitas dengan bonus deposit, cashback rollingan, dan event spesial big match.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT SECTION: Card Fitur -->
+    <section class="py-16 px-6 bg-gradient-to-b from-slate-900 to-[#0a0f2a]">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold"><span class="text-blue-500">Fitur</span> Unggulan Bolapelangi</h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mt-3 rounded-full shadow-lg shadow-blue-500/50"></div>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div class="bg-slate-800/50 rounded-2xl p-6 border border-blue-500/30 text-center card-glow hover:shadow-blue-500/20">
+            <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 shadow-md">
+              <i class="fas fa-calendar-week text-3xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Jadwal Pertandingan</h3>
+            <p class="text-gray-300 text-sm mt-2">Liga Inggris, Spanyol, Italia, UCL & jadwal lengkap setiap pekan.</p>
+            <a href="https://shortq.info/prediksibola" class="inline-block mt-4 text-blue-400 text-sm font-semibold hover:text-blue-300 transition">Selengkapnya →</a>
+          </div>
+          <div class="bg-slate-800/50 rounded-2xl p-6 border border-blue-500/30 text-center card-glow">
+            <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-chart-line text-3xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Prediksi Skor</h3>
+            <p class="text-gray-300 text-sm mt-2">Analisis mendalam, prediksi skor akhir & peluang kemenangan tim.</p>
+            <a href="https://shortq.info/prediksibola" class="inline-block mt-4 text-blue-400 text-sm font-semibold hover:text-blue-300 transition">Cek Prediksi →</a>
+          </div>
+          <div class="bg-slate-800/50 rounded-2xl p-6 border border-blue-500/30 text-center card-glow">
+            <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-trophy text-3xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Bukti Kemenangan</h3>
+            <p class="text-gray-300 text-sm mt-2">Histori lengkap slip taruhan menang, hasil cashout, dan rekapan kemenangan Anda.</p>
+            <a href="https://bopel.link/info-kemenangan" class="inline-block mt-4 text-blue-400 text-sm font-semibold hover:text-blue-300 transition">Lihat Historiku →</a>
+          </div>
+          <div class="bg-slate-800/50 rounded-2xl p-6 border border-blue-500/30 text-center card-glow">
+            <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-coins text-3xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Pasaran Bola</h3>
+            <p class="text-gray-300 text-sm mt-2">Handicap, OU, 1x2, dan odds terbaik dari berbagai sumber.</p>
+            <a href="https://bopel.link/5" class="inline-block mt-4 text-blue-400 text-sm font-semibold hover:text-blue-300 transition">Lihat Pasaran →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-20 px-6 bg-[#020617] border-y border-blue-500/30">
+      <div class="max-w-4xl mx-auto text-center">
+        <i class="fas fa-crown text-5xl text-blue-500 mb-4 drop-shadow-lg"></i>
+        <h2 class="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">Siap Menangkan Taruhanmu?</h2>
+        <p class="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">Daftar sekarang dan dapatkan bonus 100% untuk member baru. Nikmati odds terbaik dan fitur lengkap.</p>
+        <div class="mt-10">
+          <a href="https://shortq.org/bolapelangi" class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl font-black text-xl shadow-2xl neon-glow transition-all hover:scale-105">
+            <i class="fas fa-rocket"></i> Bergabung Sekarang
+            <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+        <p class="text-blue-300/60 text-sm mt-6">*Syarat & ketentuan berlaku | 18+</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950/80 py-8 text-center text-gray-400 border-t border-blue-500/20">
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="#" class="hover:text-blue-400 transition">Kebijakan Privasi</a>
+        <a href="#" class="hover:text-blue-400 transition">Syarat & Ketentuan</a>
+        <a href="https://bopel.vip/wa" class="hover:text-blue-400 transition">Bantuan</a>
+      </div>
+      <p class="text-xs mt-4">© 2025 BolaPelangi — Platform Informasi Bola & Pasaran Resmi</p>
+    </footer>
+  </main>
+
+  <!-- FLOATING SOCIAL ICONS: WhatsApp & Telegram (kanan bawah) dengan Animasi -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <!-- WhatsApp -->
+    <a href="https://bopel.vip/wa" target="_blank" 
+       class="whatsapp-float group w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-green-500/50" 
+       aria-label="WhatsApp">
+      <i class="fab fa-whatsapp text-white text-3xl"></i>
+      <span class="absolute right-full mr-3 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-lg translate-x-2 group-hover:translate-x-0">
+        <i class="fab fa-whatsapp mr-1 text-green-400"></i> Chat WhatsApp
+      </span>
+    </a>
+    
+    <!-- Telegram -->
+    <a href="https://bopel.link/telegram" target="_blank" 
+       class="telegram-float group w-14 h-14 bg-[#26A5E4] rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-blue-400/50" 
+       aria-label="Telegram">
+      <i class="fab fa-telegram-plane text-white text-3xl"></i>
+      <span class="absolute right-full mr-3 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-lg translate-x-2 group-hover:translate-x-0">
+        <i class="fab fa-telegram mr-1 text-blue-400"></i> Join Telegram
+      </span>
+    </a>
+  </div>
+
+  <!-- JavaScript Hamburger & Floating Icon Enhancement -->
+  <script>
+    (function() {
+      // Hamburger menu toggle
+      const toggleBtn = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        const links = mobileMenu.querySelectorAll('a');
+        links.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      }
+      
+      // Optional: Tambahkan efek klik pada floating icon
+      const waIcon = document.querySelector('.whatsapp-float');
+      const tgIcon = document.querySelector('.telegram-float');
+      
+      if (waIcon) {
+        waIcon.addEventListener('click', () => {
+          console.log('WhatsApp clicked - redirecting to chat');
+        });
+      }
+      
+      if (tgIcon) {
+        tgIcon.addEventListener('click', () => {
+          console.log('Telegram clicked - redirecting to channel');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
