@@ -292,6 +292,192 @@
         });
       }
     })();
+
+    // ========== FUNGSI BLOKIR KLIK KANAN & DEVELOPER TOOLS ==========
+
+// 1. MEMBLOKIR KLIK KANAN (Right Click)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  // Optional: Tampilkan peringatan (bisa diaktifkan jika ingin)
+  // alert('Klik kanan tidak diizinkan di website ini!');
+  return false;
+});
+
+// 2. MEMBLOKIR SHORTCUT DEVELOPER TOOLS
+document.addEventListener('keydown', function(e) {
+  // F12
+  if (e.key === 'F12') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+Shift+I (Windows/Linux)
+  if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+Shift+J (Windows/Linux)
+  if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+Shift+C (Windows/Linux)
+  if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+U (View Source)
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+S (Save Page)
+  if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Command+Option+I (Mac)
+  if (e.metaKey && e.altKey && e.key === 'I') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Command+Option+J (Mac)
+  if (e.metaKey && e.altKey && e.key === 'J') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Command+Option+C (Mac)
+  if (e.metaKey && e.altKey && e.key === 'C') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Command+U (Mac View Source)
+  if (e.metaKey && e.key === 'u') {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// 3. MEMBLOKIR DRAG AND DROP (Menyeret gambar/teks)
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+  return false;
+});
+
+// 4. MEMBLOKIR SELECTION (Menyeleksi teks)
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+  return false;
+});
+
+// 5. MEMBLOKIR COPY, CUT, PASTE (Opsional)
+document.addEventListener('copy', function(e) {
+  e.preventDefault();
+  // alert('Menyalin konten tidak diizinkan!');
+  return false;
+});
+
+document.addEventListener('cut', function(e) {
+  e.preventDefault();
+  return false;
+});
+
+document.addEventListener('paste', function(e) {
+  e.preventDefault();
+  return false;
+});
+
+// 6. DETEKSI DEVTOOLS TERBUKA (Advanced)
+(function detectDevTools() {
+  let devToolsOpen = false;
+  const threshold = 160; // ambang batas deteksi
+  
+  function checkDevTools() {
+    const widthDiff = window.outerWidth - window.innerWidth;
+    const heightDiff = window.outerHeight - window.innerHeight;
+    
+    if (widthDiff > threshold || heightDiff > threshold || 
+        (widthDiff === 0 && heightDiff === 0 && window.Firebug && window.Firebug.chrome)) {
+      if (!devToolsOpen) {
+        devToolsOpen = true;
+        // Optional: Redirect atau tampilkan peringatan
+        // window.location.href = 'about:blank';
+        console.warn('Developer Tools terdeteksi!');
+      }
+    } else {
+      devToolsOpen = false;
+    }
+  }
+  
+  // Cek setiap 1 detik
+  setInterval(checkDevTools, 1000);
+  
+  // Cek juga saat resize
+  window.addEventListener('resize', checkDevTools);
+})();
+
+// 7. MEMBLOKIR CONSOLE LOG SPAM (Mencegah debug via console)
+(function blockConsole() {
+  const noop = function() {};
+  const consoleMethods = ['log', 'info', 'warn', 'error', 'debug', 'trace'];
+  
+  // Optional: Nonaktifkan console (hati-hati karena bisa mengganggu debugging sendiri)
+  // for (let method of consoleMethods) {
+  //   if (console[method]) {
+  //     console[method] = noop;
+  //   }
+  // }
+  
+  // Mencegah akses ke console dari injected script
+  if (window.console) {
+    // Tapi biarkan console error untuk debugging internal
+    console.log('%c⚠️ Developer tools terdeteksi!', 'color: red; font-size: 16px;');
+  }
+})();
+
+// 8. MENCEGAH INSPECT ELEMENT MELALUI MOUSE (Deteksi element inspection)
+document.addEventListener('mousedown', function(e) {
+  // Cek jika tombol kanan + shift (bisa untuk inspect)
+  if (e.button === 2 && e.shiftKey) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// 9. MENCEGAH DEBUGGER VIA CONSOLE
+(function preventDebugger() {
+  function debuggerBlocker() {
+    const start = Date.now();
+    debugger;
+    const end = Date.now();
+    if (end - start > 100) {
+      // Debugger terdeteksi
+      console.warn('Debugger detected!');
+      // Optional: Redirect
+      // window.location.href = 'about:blank';
+    }
+    setTimeout(debuggerBlocker, 100);
+  }
+  
+  // Nonaktifkan jika ingin menghindari infinite loop
+  // debuggerBlocker();
+})();
+
+// 10. MEMBLOKIR AKSES KE FILE SYSTEM (Prevent save as)
+window.addEventListener('beforeunload', function(e) {
+  // Tidak ada aksi khusus, hanya mencegah beberapa kasus
+  return null;
+});
+
+console.log('🔒 Proteksi konten aktif: Klik kanan & Developer Tools diblokir');
   </script>
 </body>
 </html>
